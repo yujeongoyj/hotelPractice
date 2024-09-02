@@ -1077,7 +1077,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="290" parent="1" name="nyamnyamdb">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-09-02.03:45:24</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-09-02.10:24:51</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
     <schema id="291" parent="1" name="performance_schema">
@@ -1108,5 +1108,750 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
+    <table id="298" parent="290" name="address">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="299" parent="290" name="booking_list">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="300" parent="290" name="booking_qna">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="301" parent="290" name="cart">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="302" parent="290" name="category">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="303" parent="290" name="facilities">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="304" parent="290" name="fix_qna">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="305" parent="290" name="hotel">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="306" parent="290" name="img">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="307" parent="290" name="like_list">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="308" parent="290" name="review">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="309" parent="290" name="room">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="310" parent="290" name="user">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <column id="311" parent="298" name="latitude">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>double|0s</StoredType>
+    </column>
+    <column id="312" parent="298" name="longitude">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>double|0s</StoredType>
+    </column>
+    <column id="313" parent="298" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="314" parent="298" name="address">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="315" parent="298" name="address_detail">
+      <Position>5</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="316" parent="298" name="post_code">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <index id="317" parent="298" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="318" parent="298" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="319" parent="299" name="cancel">
+      <Position>1</Position>
+      <StoredType>bit(1)|0s</StoredType>
+    </column>
+    <column id="320" parent="299" name="check_in_date">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <column id="321" parent="299" name="check_out_date">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <column id="322" parent="299" name="total_people">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="323" parent="299" name="total_price">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="324" parent="299" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="325" parent="299" name="room_id">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="326" parent="299" name="user_id">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="327" parent="299" name="FK195j2vatqghrewykjx5jp69be">
+      <ColNames>room_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>room</RefTableName>
+    </foreign-key>
+    <foreign-key id="328" parent="299" name="FK2y3fiiybm9l5vmq8sg5uyaqxb">
+      <ColNames>user_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>user</RefTableName>
+    </foreign-key>
+    <index id="329" parent="299" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="330" parent="299" name="FK195j2vatqghrewykjx5jp69be">
+      <ColNames>room_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="331" parent="299" name="FK2y3fiiybm9l5vmq8sg5uyaqxb">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="332" parent="299" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="333" parent="300" name="hotel_id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="334" parent="300" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="335" parent="300" name="user_id">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="336" parent="300" name="title">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="337" parent="300" name="content">
+      <Position>5</Position>
+      <StoredType>tinytext|0s</StoredType>
+    </column>
+    <foreign-key id="338" parent="300" name="FK1g0kd92ihx2dwu3whrd0a99hj">
+      <ColNames>hotel_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>hotel</RefTableName>
+    </foreign-key>
+    <foreign-key id="339" parent="300" name="FKqmcbtq95b0sjk7adojv44c997">
+      <ColNames>user_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>user</RefTableName>
+    </foreign-key>
+    <index id="340" parent="300" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="341" parent="300" name="FK1g0kd92ihx2dwu3whrd0a99hj">
+      <ColNames>hotel_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="342" parent="300" name="FKqmcbtq95b0sjk7adojv44c997">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="343" parent="300" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="344" parent="301" name="checkin_date">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <column id="345" parent="301" name="checkout_date">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <column id="346" parent="301" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="347" parent="301" name="room_id">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="348" parent="301" name="user_id">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="349" parent="301" name="FK6h0aspc5ahcox8kkq43axbxob">
+      <ColNames>room_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>room</RefTableName>
+    </foreign-key>
+    <foreign-key id="350" parent="301" name="FKl70asp4l4w0jmbm1tqyofho4o">
+      <ColNames>user_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>user</RefTableName>
+    </foreign-key>
+    <index id="351" parent="301" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="352" parent="301" name="FK6h0aspc5ahcox8kkq43axbxob">
+      <ColNames>room_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="353" parent="301" name="FKl70asp4l4w0jmbm1tqyofho4o">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="354" parent="301" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="355" parent="302" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="356" parent="302" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <index id="357" parent="302" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="358" parent="302" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="359" parent="303" name="air_conditioning">
+      <Position>1</Position>
+      <StoredType>bit(1)|0s</StoredType>
+    </column>
+    <column id="360" parent="303" name="airport_shuttle">
+      <Position>2</Position>
+      <StoredType>bit(1)|0s</StoredType>
+    </column>
+    <column id="361" parent="303" name="bar">
+      <Position>3</Position>
+      <StoredType>bit(1)|0s</StoredType>
+    </column>
+    <column id="362" parent="303" name="breakfast">
+      <Position>4</Position>
+      <StoredType>bit(1)|0s</StoredType>
+    </column>
+    <column id="363" parent="303" name="ev_charging_station">
+      <Position>5</Position>
+      <StoredType>bit(1)|0s</StoredType>
+    </column>
+    <column id="364" parent="303" name="free_parking">
+      <Position>6</Position>
+      <StoredType>bit(1)|0s</StoredType>
+    </column>
+    <column id="365" parent="303" name="free_wifi">
+      <Position>7</Position>
+      <StoredType>bit(1)|0s</StoredType>
+    </column>
+    <column id="366" parent="303" name="gym">
+      <Position>8</Position>
+      <StoredType>bit(1)|0s</StoredType>
+    </column>
+    <column id="367" parent="303" name="laundry_facilities">
+      <Position>9</Position>
+      <StoredType>bit(1)|0s</StoredType>
+    </column>
+    <column id="368" parent="303" name="non_smoking">
+      <Position>10</Position>
+      <StoredType>bit(1)|0s</StoredType>
+    </column>
+    <column id="369" parent="303" name="pet_friendly">
+      <Position>11</Position>
+      <StoredType>bit(1)|0s</StoredType>
+    </column>
+    <column id="370" parent="303" name="restaurant">
+      <Position>12</Position>
+      <StoredType>bit(1)|0s</StoredType>
+    </column>
+    <column id="371" parent="303" name="spa">
+      <Position>13</Position>
+      <StoredType>bit(1)|0s</StoredType>
+    </column>
+    <column id="372" parent="303" name="swimming_pool">
+      <Position>14</Position>
+      <StoredType>bit(1)|0s</StoredType>
+    </column>
+    <column id="373" parent="303" name="twentyfour_hour_front_desk">
+      <Position>15</Position>
+      <StoredType>bit(1)|0s</StoredType>
+    </column>
+    <column id="374" parent="303" name="hotel_id">
+      <NotNull>1</NotNull>
+      <Position>16</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="375" parent="303" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>17</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="376" parent="303" name="FKeye13xdpn0stvtejuu35pt2qh">
+      <ColNames>hotel_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>hotel</RefTableName>
+    </foreign-key>
+    <index id="377" parent="303" name="UKdl7smfqf3xmw14rx1v1udfkq4">
+      <ColNames>hotel_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="378" parent="303" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="379" parent="303" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="380" parent="303" name="UKdl7smfqf3xmw14rx1v1udfkq4">
+      <UnderlyingIndexName>UKdl7smfqf3xmw14rx1v1udfkq4</UnderlyingIndexName>
+    </key>
+    <column id="381" parent="304" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="382" parent="304" name="content">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="383" parent="304" name="title">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <index id="384" parent="304" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="385" parent="304" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="386" parent="305" name="grade">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="387" parent="305" name="address_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="388" parent="305" name="category_id">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="389" parent="305" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="390" parent="305" name="user_id">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="391" parent="305" name="name">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="392" parent="305" name="tel">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="393" parent="305" name="detail">
+      <Position>8</Position>
+      <StoredType>tinytext|0s</StoredType>
+    </column>
+    <foreign-key id="394" parent="305" name="FK48m0ei7s6biikxbrku04slp0s">
+      <ColNames>address_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>address</RefTableName>
+    </foreign-key>
+    <foreign-key id="395" parent="305" name="FKcwvmmtpfa1hsm8gwya0k0hmfk">
+      <ColNames>category_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>category</RefTableName>
+    </foreign-key>
+    <foreign-key id="396" parent="305" name="FKi0j3nnn6eecin1ry6cujioqq2">
+      <ColNames>user_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>user</RefTableName>
+    </foreign-key>
+    <index id="397" parent="305" name="UKowt8iiq4d3dff6uvmdyjbmmar">
+      <ColNames>address_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="398" parent="305" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="399" parent="305" name="UKtqp0s7u4h875xo3vomdm6hrkd">
+      <ColNames>tel</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="400" parent="305" name="FKcwvmmtpfa1hsm8gwya0k0hmfk">
+      <ColNames>category_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="401" parent="305" name="FKi0j3nnn6eecin1ry6cujioqq2">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="402" parent="305" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="403" parent="305" name="UKowt8iiq4d3dff6uvmdyjbmmar">
+      <UnderlyingIndexName>UKowt8iiq4d3dff6uvmdyjbmmar</UnderlyingIndexName>
+    </key>
+    <key id="404" parent="305" name="UKtqp0s7u4h875xo3vomdm6hrkd">
+      <UnderlyingIndexName>UKtqp0s7u4h875xo3vomdm6hrkd</UnderlyingIndexName>
+    </key>
+    <column id="405" parent="306" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="406" parent="306" name="path">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <index id="407" parent="306" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="408" parent="306" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="409" parent="307" name="hotel_id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="410" parent="307" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="411" parent="307" name="user_id">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="412" parent="307" name="FK99ersdar7hthi13l5y8nljqm3">
+      <ColNames>hotel_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>hotel</RefTableName>
+    </foreign-key>
+    <foreign-key id="413" parent="307" name="FKfydlekljkrsnfhmql0cki0jjw">
+      <ColNames>user_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>user</RefTableName>
+    </foreign-key>
+    <index id="414" parent="307" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="415" parent="307" name="FK99ersdar7hthi13l5y8nljqm3">
+      <ColNames>hotel_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="416" parent="307" name="FKfydlekljkrsnfhmql0cki0jjw">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="417" parent="307" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="418" parent="308" name="rating">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="419" parent="308" name="create_date">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>datetime(6)|0s</StoredType>
+    </column>
+    <column id="420" parent="308" name="hotel_id">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="421" parent="308" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="422" parent="308" name="user_id">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="423" parent="308" name="content">
+      <Position>6</Position>
+      <StoredType>tinytext|0s</StoredType>
+    </column>
+    <foreign-key id="424" parent="308" name="FKi0ly7ivbh8ijdgoi7cwtuoavt">
+      <ColNames>hotel_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>hotel</RefTableName>
+    </foreign-key>
+    <foreign-key id="425" parent="308" name="FKiyf57dy48lyiftdrf7y87rnxi">
+      <ColNames>user_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>user</RefTableName>
+    </foreign-key>
+    <index id="426" parent="308" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="427" parent="308" name="FKi0ly7ivbh8ijdgoi7cwtuoavt">
+      <ColNames>hotel_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="428" parent="308" name="FKiyf57dy48lyiftdrf7y87rnxi">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="429" parent="308" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="430" parent="309" name="max_people">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="431" parent="309" name="price">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="432" parent="309" name="quantity">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="433" parent="309" name="hotel_id">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="434" parent="309" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="435" parent="309" name="img_id">
+      <Position>6</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="436" parent="309" name="name">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="437" parent="309" name="detail">
+      <Position>8</Position>
+      <StoredType>tinytext|0s</StoredType>
+    </column>
+    <foreign-key id="438" parent="309" name="FKdosq3ww4h9m2osim6o0lugng8">
+      <ColNames>hotel_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>hotel</RefTableName>
+    </foreign-key>
+    <foreign-key id="439" parent="309" name="FKdyt7igh181v7hbjeqf1bblpsc">
+      <ColNames>img_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>img</RefTableName>
+    </foreign-key>
+    <index id="440" parent="309" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="441" parent="309" name="UKc5w73nxrq82dkj3csr8lu3mpf">
+      <ColNames>img_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="442" parent="309" name="FKdosq3ww4h9m2osim6o0lugng8">
+      <ColNames>hotel_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="443" parent="309" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="444" parent="309" name="UKc5w73nxrq82dkj3csr8lu3mpf">
+      <UnderlyingIndexName>UKc5w73nxrq82dkj3csr8lu3mpf</UnderlyingIndexName>
+    </key>
+    <column id="445" parent="310" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="446" parent="310" name="email">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="447" parent="310" name="grade">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="448" parent="310" name="nickname">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="449" parent="310" name="password">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="450" parent="310" name="role">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="451" parent="310" name="tel">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <index id="452" parent="310" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="453" parent="310" name="UKnbfia2ok6c7at4i0er6uyskkx">
+      <ColNames>tel</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="454" parent="310" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="455" parent="310" name="UKnbfia2ok6c7at4i0er6uyskkx">
+      <UnderlyingIndexName>UKnbfia2ok6c7at4i0er6uyskkx</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>
