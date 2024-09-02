@@ -13,6 +13,4 @@ spring:
           boot:
             allow_jdbc_metadata_access: false
     show-sql: true
-  h2:
-    console:
-      enabled: true
+
