@@ -10,6 +10,6 @@
         <module name="lodgingCommander.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="22" />
+    <bytecodeTargetLevel target="17" />
   </component>
 </project>

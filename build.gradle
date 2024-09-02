@@ -34,7 +34,6 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'commons-codec:commons-codec:1.15'
 }
@@ -47,7 +46,7 @@ tasks.named('test') {
 
 
 bootJar {
-	jar.enabled = true // 빌드시 jar 을 실행
+	mainClass.set('com.testing.test.TestingApplication')
 }
 
 jar {
